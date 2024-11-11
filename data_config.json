@@ -1,0 +1,7 @@
+{
+    "paths": {
+      "aml_data": "/mnt/data/ibm-aml-cagri", 
+      "model_to_load": "/mnt/cagri-exp/model_zoo_multignn",
+      "model_to_save": "/mnt/cagri-exp/model_zoo_multignn"
+    }
+  }
