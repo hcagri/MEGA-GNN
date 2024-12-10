@@ -505,14 +505,12 @@ def train_gnn(tr_data, val_data, te_data, tr_inds, val_inds, te_inds, args, data
 
     if args.task == 'lp':
         negative_edge_sampling(sample_batch, args)
-    
-    if args.edge_agg_type=='adamm':
-        if args.adamm_hetero:
-            sample_batch = HeteroToMultigraph(sample_batch)
+        if args.edge_agg_type=='adamm':
+            if args.adamm_hetero:
+                sample_batch = HeteroToMultigraph(sample_batch)
+            else:
+                sample_batch = ToMultigraph(sample_batch)
         else:
-            sample_batch = ToMultigraph(sample_batch)
-    else:
-        if not isinstance(sample_batch, HeteroData):
             sample_batch = create_hetero_obj(sample_batch.x, sample_batch.y, sample_batch.edge_index, sample_batch.edge_attr, sample_batch.timestamps, args, sample_batch.simp_edge_batch, sample_batch)
 
     if args.ports and args.ports_batch:

@@ -49,14 +49,13 @@ def main():
     if args.adamm_hetero:
         name+="adam-hetero"
 
-    project = "ICLR-LP" if args.task =='lp' else "ICLR"
 
     #define a model config dictionary and wandb logging at the same time
     wandb.init(
         mode="disabled" if args.testing else "online",
-        project=project, #replace this with your wandb project name if you want to use wandb logging
-        entity="hcbilgi",
+        project='project_name', #replace this with your wandb project name if you want to use wandb logging
         name=name,
+        
         config={
             "epochs": args.n_epochs,
             "batch_size": args.batch_size,

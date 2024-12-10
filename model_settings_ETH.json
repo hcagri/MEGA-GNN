@@ -1,7 +1,7 @@
 {
     "gin": {
       "params": {
-        "lr": 0.0008,
+        "lr": 0.006213266113989207,
         "n_hidden": 32,
         "n_mlp_layers": 1,
         "n_gnn_layers": 2,
