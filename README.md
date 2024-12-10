@@ -13,11 +13,25 @@ Graph Neural Networks (GNNs) have seen significant advances in recent years, yet
 
 ## Setup
 
-- Create a new Conda environment
+- Create a new Conda environment, and activate.
 ```bash
 conda env create -f env.yml
 conda activate megagnn
+
 ```
+- Install Pytorch and Pytorch Geometric
+```bash
+conda install pytorch==2.2.2 torchvision==0.17.2 torchaudio==2.2.2 pytorch-cuda=11.8 -c pytorch -c nvidia
+conda install pyg -c pyg
+pip install -r requirements.txt
+```
+- Lastly, install genagg
+```bash
+cd megagnn 
+pip install -e .
+```
+
+
 ## Data
 
 The data needed for the experiments can be found on [Kaggle](https://www.kaggle.com/datasets/ealtman2019 ibm-transactions-for-anti-money-laundering-aml/data). To use this data with the provided training scripts, you first need to perform a pre-processing step for the downloaded transaction files (e.g. `HI-Small_Trans.csv`):
