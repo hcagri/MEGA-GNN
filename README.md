@@ -70,4 +70,4 @@ If you use our work in your research, please cite our paper:
 
 ### Acknowledgements
 
-We used the codebase of [GenAgg](https://github.com/Acciorocketships/generalised-aggregation) for genagg aggregation.
+We used the codebase of [Multi-GNN](https://github.com/IBM/Multi-GNN) and [GenAgg](https://github.com/Acciorocketships/generalised-aggregation) and thank their authors for their excellent work.
