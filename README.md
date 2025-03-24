@@ -27,7 +27,7 @@ pip install -r requirements.txt
 ```
 - Lastly, install genagg
 ```bash
-cd megagnn 
+cd genagg 
 pip install -e .
 ```
 
